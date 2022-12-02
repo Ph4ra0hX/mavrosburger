@@ -28,13 +28,14 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  if (!req.session.meuspedidos) {
-    req.session.meuspedidos = "";
-    req.session.pedidoCompleto = "";
-    req.session.numeroDoPedido = 1;
-    req.session.total = 0;
-  }
-  res.render("index");
+  res.json("fsdfsdfsdf");
+  //if (!req.session.meuspedidos) {
+  //  req.session.meuspedidos = "";
+  //  req.session.pedidoCompleto = "";
+  //  req.session.numeroDoPedido = 1;
+  //  req.session.total = 0;
+  //}
+  //res.render("index");
 });
 
 var carnes = [
