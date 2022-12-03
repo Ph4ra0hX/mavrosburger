@@ -332,7 +332,7 @@ app.post("/finalizarpedidosanduiche", (req, res) => {
 
   req.session.numeroDoPedido++;
 
-  res.sendFile(path.join(__dirname + "/public/finalizar.html"));
+  res.render("finalizar");
 });
 
 //-------------------------------------------------------------------
@@ -426,7 +426,7 @@ app.post("/finalizarpedidobebidas", (req, res) => {
     req.session.pedidoCompleto += "\n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
   }
 
-  res.sendFile(path.join(__dirname + "/public/finalizar.html"));
+  res.render("finalizar");
 });
 
 app.post("/enviar", (req, res) => {
