@@ -27,6 +27,10 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use(express.static(path.join(__dirname, "views")));
+
+app.engine("html", require("ejs").renderFile);
+
 app.get("/", (req, res) => {
   //res.json("fsdfsdfsdf");
   if (!req.session.meuspedidos) {
@@ -35,7 +39,7 @@ app.get("/", (req, res) => {
     req.session.numeroDoPedido = 1;
     req.session.total = 0;
   }
-  res.render("index.html");
+  res.render("index");
 });
 
 var carnes = [
