@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
     req.session.numeroDoPedido = 1;
     req.session.total = 0;
   }
-  res.render("index");
+  res.render("index.html");
 });
 
 var carnes = [
